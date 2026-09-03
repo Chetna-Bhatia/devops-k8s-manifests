@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: chetna04/backend:latest
+          image: chetna04/backend:1ebce18bce7ee4fc411bf9f15e4e14d8e481a41f
           ports:
             - containerPort: 5000
 ---
