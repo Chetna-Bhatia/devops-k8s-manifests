@@ -13,19 +13,20 @@ spec:
         app: backend
     spec:
       containers:
-        - name: backend
-          image: chetna04/backend:1ebce18bce7ee4fc411bf9f15e4e14d8e481a41f
-          ports:
-            - containerPort: 5000
+      - name: backend
+        image: chetna04/backend:latest
+        ports:
+        - containerPort: 5000
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: backend-service
 spec:
-  type: ClusterIP
+  type: NodePort
+  ports:
+  - port: 5000
+    targetPort: 5000
+    nodePort: 30090
   selector:
     app: backend
-  ports:
-    - port: 5000
-      targetPort: 5000
