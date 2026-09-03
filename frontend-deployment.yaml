@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: chetna04/frontend:b187f606b04361551e26edd4e7d47a9694238347
+        image: chetna04/frontend:2b1611423c49a891d6fd133eeae937f9b87d7783
         ports:
         - containerPort: 80
 ---
